@@ -3,11 +3,7 @@
     {
       "target": "my-awesome-project",
       "public": "dist/my-awesome-project",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ],
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "rewrites": [
         {
           "source": "**",
