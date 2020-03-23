@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+input {
+  margin-left: 10px;
+}

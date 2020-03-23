@@ -4,5 +4,17 @@ service cloud.firestore {
     match /{document=**} {
       allow read, write: if false;
     }
+
+    function isLoggedInUser(userId) {
+      return request.auth!=null && request.auth.uid == userId;
+    }
+    match /tp/{tpId} {
+      allow read: if true;
+
+      match /progress/{userId} {
+        allow read: if true;
+        allow write: if isLoggedInUser(userId);
+      }
+    }
   }
 }

@@ -1,0 +1,14 @@
+<div class="root">
+  <h3>{{ item.userName }}</h3>
+  <div *ngFor="let label of labels; let idx = index" class="line">
+    <div>
+      {{ label }}
+    </div>
+    <input
+      type="checkbox"
+      [disabled]="authId !== item.uid"
+      (change)="updateToIdx(idx)"
+      [checked]="item.stepsDone[idx] || false"
+    />
+  </div>
+</div>

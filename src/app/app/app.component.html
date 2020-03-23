@@ -1,0 +1,10 @@
+<div class="wrapper">
+  <app-progress-reporter
+    *ngFor="let item of items | async"
+    [item]="item"
+    [authId]="userId | async"
+    [labels]="stepsName"
+    [tpId]="tpId"
+    (updateArray)="updateForData($event, item)"
+  ></app-progress-reporter>
+</div>
