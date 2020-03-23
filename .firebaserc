@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "progress-reporter": {
+      "hosting": {
+        "my-awesome-project": [
+          "progress-reporter"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "progress-reporter"
+  }
+}
